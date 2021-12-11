@@ -21,7 +21,9 @@ TextStyle greenTextStyle = GoogleFonts.poppins(
 TextStyle primaryTextStyle = GoogleFonts.poppins(
   color: kPrimaryColor,
 );
-
+TextStyle whiteTextStyle = GoogleFonts.poppins(
+  color: kWhiteColor,
+);
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
 FontWeight medium = FontWeight.w500;

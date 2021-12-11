@@ -1,6 +1,5 @@
-// ignore_for_file: avoid_unnecessary_containers, non_constant_identifier_names
-
 import 'package:flutter/material.dart';
+import 'package:online_course/ui/pages/detail.dart';
 import 'package:online_course/ui/theme.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,6 +7,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names
     Widget BottomNavbar() {
       return Align(
         alignment: Alignment.bottomCenter,
@@ -62,6 +62,8 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // ignore: non_constant_identifier_names
+    // ignore: non_constant_identifier_names
     Widget Header() {
       return Container(
         margin: const EdgeInsets.only(left: 24, top: 24, right: 24),
@@ -141,6 +143,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // ignore: non_constant_identifier_names
     Widget CourseCard() {
       return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -315,6 +318,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // ignore: non_constant_identifier_names
     Widget TextPopularCourseCard() {
       return Container(
         margin: const EdgeInsets.only(top: 24, left: 24, right: 24),
@@ -338,6 +342,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // ignore: non_constant_identifier_names
     Widget PopularCourseCard() {
       return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -345,61 +350,66 @@ class HomePage extends StatelessWidget {
           margin: const EdgeInsets.only(top: 12, left: 24),
           child: Row(
             children: [
-              Container(
-                width: 180,
-                height: 205,
-                decoration: BoxDecoration(
-                  color: kWhiteColor,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: 180,
-                      height: 100,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(12),
-                          topRight: Radius.circular(12),
-                        ),
-                        image: DecorationImage(
-                          image: AssetImage('assets/image 7.png'),
-                        ),
-                      ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DetailPage(),
                     ),
-                    Container(
-                      margin: const EdgeInsets.only(
-                        top: 12,
-                        left: 12,
+                  );
+                },
+                child: Container(
+                  width: 180,
+                  height: 205,
+                  decoration: BoxDecoration(
+                    color: kWhiteColor,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 180,
+                        height: 100,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                          ),
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/image 7.png'),
+                          ),
+                        ),
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            child: Text(
+                      Container(
+                        margin: const EdgeInsets.only(
+                          top: 12,
+                          left: 12,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
                               'free',
                               style: greenTextStyle.copyWith(
                                   fontSize: 12, fontWeight: semiBold),
                             ),
-                          ),
-                          // ignore: prefer_const_constructors
-                          SizedBox(
-                            height: 4,
-                          ),
-                          Container(
-                            child: Text(
+                            // ignore: prefer_const_constructors
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Text(
                               'UI Design : Wireframe\nto Visual Design',
                               style: blackTextStyle.copyWith(
                                   fontSize: 12, fontWeight: semiBold),
                             ),
-                          ),
-                          // ignore: prefer_const_constructors
-                          SizedBox(
-                            height: 7,
-                          ),
-                          Container(
-                            child: Row(
+                            // ignore: prefer_const_constructors
+                            SizedBox(
+                              height: 7,
+                            ),
+                            Row(
                               children: [
                                 Container(
                                   width: 16,
@@ -458,11 +468,11 @@ class HomePage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               Container(
@@ -485,6 +495,7 @@ class HomePage extends StatelessWidget {
                           topRight: Radius.circular(12),
                         ),
                         image: DecorationImage(
+                          fit: BoxFit.cover,
                           image: AssetImage('assets/image 7 (1).png'),
                         ),
                       ),
@@ -497,88 +508,85 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            child: Text(
-                              'free',
-                              style: greenTextStyle.copyWith(
-                                  fontSize: 12, fontWeight: semiBold),
-                            ),
+                          Text(
+                            'free',
+                            style: greenTextStyle.copyWith(
+                                fontSize: 12, fontWeight: semiBold),
                           ),
                           // ignore: prefer_const_constructors
                           SizedBox(
                             height: 4,
                           ),
-                          Container(
-                            child: Text(
-                              'UI Design : Styleguide\nwith Figma',
-                              style: blackTextStyle.copyWith(
-                                  fontSize: 12, fontWeight: semiBold),
-                            ),
+                          Text(
+                            'UI Design : Styleguide\nwith Figma',
+                            style: blackTextStyle.copyWith(
+                                fontSize: 12, fontWeight: semiBold),
                           ),
                           // ignore: prefer_const_constructors
                           SizedBox(
                             height: 7,
                           ),
-                          Container(
-                            child: Row(
-                              children: [
-                                Container(
-                                  width: 16,
-                                  height: 16,
-                                  decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage('assets/Star 1.png'),
-                                    ),
+                          Row(
+                            children: [
+                              Container(
+                                width: 16,
+                                height: 16,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/Star 1.png'),
                                   ),
                                 ),
-                                Container(
-                                  width: 16,
-                                  height: 16,
-                                  decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage('assets/Star 1.png'),
-                                    ),
+                              ),
+                              Container(
+                                width: 16,
+                                height: 16,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/Star 1.png'),
                                   ),
                                 ),
-                                Container(
-                                  width: 16,
-                                  height: 16,
-                                  decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage('assets/Star 1.png'),
-                                    ),
+                              ),
+                              Container(
+                                width: 16,
+                                height: 16,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: AssetImage('assets/Star 1.png'),
                                   ),
                                 ),
-                                Container(
-                                  width: 16,
-                                  height: 16,
-                                  decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage('assets/Star 1.png'),
-                                    ),
+                              ),
+                              Container(
+                                width: 16,
+                                height: 16,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: AssetImage('assets/Star 1.png'),
                                   ),
                                 ),
-                                Container(
-                                  width: 16,
-                                  height: 16,
-                                  decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage('assets/Star 1.png'),
-                                    ),
+                              ),
+                              Container(
+                                width: 16,
+                                height: 16,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: AssetImage('assets/Star 1.png'),
                                   ),
                                 ),
-                                Container(
-                                  margin: const EdgeInsets.only(left: 4),
-                                  child: Text(
-                                    '(1055)',
-                                    style: greyTextStyle.copyWith(
-                                      fontSize: 12,
-                                      fontWeight: medium,
-                                    ),
+                              ),
+                              Container(
+                                margin: const EdgeInsets.only(left: 4),
+                                child: Text(
+                                  '(1055)',
+                                  style: greyTextStyle.copyWith(
+                                    fontSize: 12,
+                                    fontWeight: medium,
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -592,6 +600,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // ignore: non_constant_identifier_names
     Widget TextArticle() {
       return Container(
         margin: const EdgeInsets.only(top: 24, left: 24, right: 24),
@@ -615,6 +624,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // ignore: non_constant_identifier_names
     Widget ArticleCard() {
       return Container(
         margin: const EdgeInsets.only(
@@ -637,6 +647,7 @@ class HomePage extends StatelessWidget {
               height: 80,
               decoration: const BoxDecoration(
                 image: DecorationImage(
+                  fit: BoxFit.cover,
                   image: AssetImage('assets/image 8.png'),
                 ),
                 borderRadius: BorderRadius.only(
@@ -648,30 +659,24 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               width: 12,
             ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    child: Text(
-                      'How to: Work faster as\nFull Stack Designer',
-                      style: blackTextStyle.copyWith(
-                          fontSize: 12, fontWeight: semiBold),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Container(
-                    child: Text(
-                      'UI Design',
-                      style: greyTextStyle.copyWith(
-                          fontSize: 10, fontWeight: medium),
-                    ),
-                  ),
-                ],
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'How to: Work faster as\nFull Stack Designer',
+                  style: blackTextStyle.copyWith(
+                      fontSize: 12, fontWeight: semiBold),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'UI Design',
+                  style:
+                      greyTextStyle.copyWith(fontSize: 10, fontWeight: medium),
+                ),
+              ],
             ),
             Container(
               margin: const EdgeInsets.only(
